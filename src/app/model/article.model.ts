@@ -1,5 +1,4 @@
 import { IComment } from './comment.model';
-
 export interface IArticle {
   id: number;
   author: string;

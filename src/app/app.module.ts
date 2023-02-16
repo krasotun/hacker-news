@@ -15,7 +15,8 @@ import { HeaderComponent } from './header/header.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { ArticlesListItemComponent } from './articles-list/articles-list-item/articles-list-item.component';
 import { CommentsListComponent } from './comments-list/comments-list.component';
-import { CommentComponent } from './comment/comment.component';
+import { CommentComponent } from './comments-list/comment/comment.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CommentComponent } from './comment/comment.component';
     ArticlesListItemComponent,
     CommentsListComponent,
     CommentComponent,
+    ArticleComponent,
   ],
   imports: [
     BrowserModule,
