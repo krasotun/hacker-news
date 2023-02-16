@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
-import { ArticleComponent } from './article/article.component';
+import { ArticlesListItemComponent } from './articles-list/articles-list-item/articles-list-item.component';
 import { CommentsListComponent } from './comments-list/comments-list.component';
 import { CommentComponent } from './comment/comment.component';
 
@@ -22,7 +22,7 @@ import { CommentComponent } from './comment/comment.component';
     AppComponent,
     HeaderComponent,
     ArticlesListComponent,
-    ArticleComponent,
+    ArticlesListItemComponent,
     CommentsListComponent,
     CommentComponent,
   ],

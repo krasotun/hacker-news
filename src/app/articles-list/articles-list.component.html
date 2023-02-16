@@ -1,7 +1,7 @@
 <ul>
   <ng-container *ngIf="articles$ | async as articles; else skeleton">
-    <app-article *ngFor="let article of articles; let i=index" [article]="article" [indexNumber]="i+1">
-    </app-article>
+    <app-articles-list-item *ngFor="let article of articles; let i=index" [article]="article" [indexNumber]="i+1">
+    </app-articles-list-item>
   </ng-container>
 </ul>
 <ng-template #skeleton>
