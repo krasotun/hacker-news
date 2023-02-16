@@ -10,9 +10,9 @@ import { API_DATA } from '../data/api.data';
 export class ArticleService {
   constructor(private _httpClient: HttpClient) {}
 
-  getArticles(): Observable<IArticle[]> {
+  getData() {
     return this._httpClient
-      .get<IArticle[]>(
+      .get(
         `${API_DATA.BASE_URL}/${API_DATA.SEARCH_PARAMS.SEARCH_BY_TAG}${API_DATA.TAGS.FRONT_PAGE}`
       )
       .pipe(

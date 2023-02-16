@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ArticleService } from '../services/article-service.service';
+import { ArticleService } from '../services/article.service';
+import { map } from 'rxjs/operators';
+import { IArticle } from '../model/article.model';
 
 @Component({
   selector: 'app-articles-list',
@@ -8,5 +10,5 @@ import { ArticleService } from '../services/article-service.service';
 })
 export class ArticlesListComponent {
   constructor(private _articleService: ArticleService) {}
-  articles$ = this._articleService.getArticles();
+  articles$ = this._articleService.getData().pipe(map((data) => data.hits));
 }
