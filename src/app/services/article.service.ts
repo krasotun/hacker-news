@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Observable, catchError, of } from 'rxjs';
-import { IArticle } from '../model/article.model';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { catchError, of } from 'rxjs';
 import { API_DATA } from '../data/api.data';
 
 @Injectable({

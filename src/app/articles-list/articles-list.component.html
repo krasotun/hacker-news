@@ -1,8 +1,9 @@
-<app-article></app-article>
-<app-article></app-article>
-<app-article></app-article>
-<app-article></app-article>
-<app-article></app-article>
-<app-article></app-article>
-<app-article></app-article>
-<app-article></app-article>
+<ul>
+  <ng-container *ngIf="articles$ | async as articles; else skeleton">
+    <app-article *ngFor="let article of articles; let i=index" [article]="article" [indexNumber]="i+1">
+    </app-article>
+  </ng-container>
+</ul>
+<ng-template #skeleton>
+  <p>Loading...</p>
+</ng-template>

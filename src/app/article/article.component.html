@@ -1,12 +1,12 @@
 <li class="article-wrapper">
   <div class="article-wrapper_top">
-    <p class="tui-text_body-xl">Number</p>
-    <p class="tui-text_body-xl">Title</p>
+    <p class="tui-text_body-xl">{{indexNumber}}</p>
+    <h6 class="tui-text_h6">{{article.title}}</h6>
   </div>
   <div class="article-wrapper_bottom">
-    <a tuiLink [routerLink]="['/']">Article URL</a>
-    <p class="tui-text_body-m">Author</p>
-    <p class="tui-text_body-m">Rating</p>
-    <a tuiLink [routerLink]="['/']">25 comments</a>
+    <a href={{article.url}}>Link</a>
+    <p class="tui-text_body-l"><b>Author :</b> {{article.author}}</p>
+    <p class="tui-text_body-l"><b>Rating :</b> {{article.points}}</p>
+    <a href={{article.url}}>Comments:{{article.num_comments}}</a>
   </div>
 </li>
