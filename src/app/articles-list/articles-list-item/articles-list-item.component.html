@@ -8,5 +8,6 @@
     <p class="tui-text_body-l"><b>Author :</b> {{article.author}}</p>
     <p class="tui-text_body-l"><b>Rating :</b> {{article.points}}</p>
     <a href={{article.url}}>Comments:{{article.num_comments}}</a>
+    <a routerLink="/article/{{article.objectID}}">Comments:{{article.num_comments}}</a>
   </div>
 </li>
