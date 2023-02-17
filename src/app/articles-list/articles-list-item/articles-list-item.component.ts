@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { IArticle } from 'src/app/model/article.model';
-import { ArticleService } from 'src/app/services/article.service';
 
 @Component({
   selector: 'app-articles-list-item',
@@ -8,13 +8,14 @@ import { ArticleService } from 'src/app/services/article.service';
   styleUrls: ['./articles-list-item.component.scss'],
 })
 export class ArticlesListItemComponent {
-  constructor(private _articlesService: ArticleService) {}
+  constructor(private _router: Router) {}
   @Input()
   article!: IArticle;
   @Input()
   indexNumber!: number;
 
-  onClick(id: number) {
-    this._articlesService.setActiveArticle(id);
+  onClick(id: string) {
+    console.log(id);
+    this._router.navigate(['article', id]);
   }
 }

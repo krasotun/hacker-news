@@ -1,2 +1,10 @@
-<p>article works!</p>
+<ng-container *ngIf="article$ | async as article;else skeleton">
+  <h4 class="tui-text_h4">
+    {{ article.title }}
+  </h4>
+</ng-container>
 <app-comments-list></app-comments-list>
+
+<ng-template #skeleton>
+  <h4 class="tui-text_h4">Loading...</h4>
+</ng-template>

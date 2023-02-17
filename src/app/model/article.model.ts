@@ -1,6 +1,6 @@
 import { IComment } from './comment.model';
 export interface IArticle {
-  objectID: number;
+  objectID: string;
   author: string;
   title: string;
   url: string;
