@@ -6,4 +6,5 @@ export const API_DATA = {
   TAGS: {
     FRONT_PAGE: 'front_page',
   },
+  GET_ITEMS: '/items/',
 };
