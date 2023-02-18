@@ -4,6 +4,7 @@ export interface IArticle {
   author: string;
   title: string;
   url: string;
+  text: string | null;
   points: number;
   num_comments: string;
   children: IComment[] | [];

@@ -1,7 +1,13 @@
 <ng-container *ngIf="article$ | async as article;else skeleton">
-  <h4 class="tui-text_h4">
-    {{ article.title }}
-  </h4>
+  <div class="article-wrapper">
+    <h4 class="tui-text_h4">
+      {{ article.title }}
+    </h4>
+    <p class="tui-text_body-l"><b>Author :</b> {{article.author}}</p>
+    <p class="tui-text_body-l"><b>Rating :</b> {{article.points}}</p>
+    <div *ngIf="article.text" [innerHtml]="article.text"></div>
+  </div>
+  <pre>{{article.children | json}}</pre>
 </ng-container>
 <app-comments-list></app-comments-list>
 
