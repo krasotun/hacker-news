@@ -1,4 +1,4 @@
-<ng-container *ngIf="article$ | async as article;else skeleton">
+<ng-container *ngIf="article$ | async as article;else loading">
   <div class="article-wrapper">
     <h4 class="tui-text_h4">
       {{ article.title }}
@@ -12,6 +12,6 @@
   </div>
 </ng-container>
 
-<ng-template #skeleton>
-  <h4 class="tui-text_h4">Loading...</h4>
+<ng-template #loading>
+  <tui-loader [overlay]="true"></tui-loader>
 </ng-template>
