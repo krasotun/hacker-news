@@ -3,13 +3,14 @@
     <h4 class="tui-text_h4">
       {{ article.title }}
     </h4>
+    <a href={{article.url}}>Link</a>
     <p class="tui-text_body-l"><b>Author :</b> {{article.author}}</p>
     <p class="tui-text_body-l"><b>Rating :</b> {{article.points}}</p>
     <div *ngIf="article.text" [innerHtml]="article.text"></div>
+    <h6 class="tui-text_h6">Comments</h6>
+    <app-comments-list [comments]="article.children"></app-comments-list>
   </div>
-  <pre>{{article.children | json}}</pre>
 </ng-container>
-<app-comments-list></app-comments-list>
 
 <ng-template #skeleton>
   <h4 class="tui-text_h4">Loading...</h4>

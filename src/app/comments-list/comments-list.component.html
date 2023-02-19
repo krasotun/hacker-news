@@ -1,7 +1,7 @@
-<app-comment></app-comment>
-<app-comment></app-comment>
-<app-comment></app-comment>
-<app-comment></app-comment>
-<app-comment></app-comment>
-<app-comment></app-comment>
-<app-comment></app-comment>
+<ul class="comments-wrapper" *ngIf="comments.length">
+  <li *ngFor="let comment of comments">
+    <span><b>{{comment.author}}</b> wrote:</span>
+    <div [innerHTML]="comment.text"></div>
+    <app-comments-list *ngIf="comment.children.length" [comments]="comment.children"></app-comments-list>
+  </li>
+</ul>
