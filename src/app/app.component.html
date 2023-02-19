@@ -1,4 +1,6 @@
 <tui-root>
   <app-header></app-header>
+  <tui-loader *ngIf="loading" [overlay]="true">
+  </tui-loader>
   <router-outlet></router-outlet>
 </tui-root>

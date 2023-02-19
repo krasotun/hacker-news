@@ -1,4 +1,4 @@
-<ng-container *ngIf="article$ | async as article;else loading">
+<ng-container *ngIf="article$ | async as article">
   <div class="article-wrapper">
     <h4 class="tui-text_h4">
       {{ article.title }}
@@ -11,7 +11,3 @@
     <app-comments-list [comments]="article.children"></app-comments-list>
   </div>
 </ng-container>
-
-<ng-template #loading>
-  <tui-loader [overlay]="true"></tui-loader>
-</ng-template>
