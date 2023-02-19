@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { ArticleService } from '../services/article.service';
 import { map } from 'rxjs/operators';
-import { IArticle } from '../model/article.model';
+import { ArticleService } from '../services/article.service';
 
 @Component({
   selector: 'app-articles-list',

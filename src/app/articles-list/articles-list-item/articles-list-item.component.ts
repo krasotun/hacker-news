@@ -13,9 +13,4 @@ export class ArticlesListItemComponent {
   article!: IArticle;
   @Input()
   indexNumber!: number;
-
-  onClick(id: string) {
-    console.log(id);
-    this._router.navigate(['article', id]);
-  }
 }
